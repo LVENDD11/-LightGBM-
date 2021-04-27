@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    ws =new WebSocket("ws://127.0.0.1:8080/");
+    ws.onopen = function (ev) { //若是连接成功，onopen函数会执行
+        console.log("连接成功")
+    };
+    ws.onmessage = function (ev) {//onmessage会接收到推送过来的消息
+        console.log(ev);
+    }
+</script>
